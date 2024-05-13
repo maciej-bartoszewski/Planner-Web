@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useNavigate } from "react-router-dom";
 
 import { MdDelete } from "react-icons/md";
 import { FaEdit } from "react-icons/fa";
@@ -9,6 +10,8 @@ const mockedEvents = [
   ];
 
 function ManageEvents() {
+    const navigate = useNavigate();
+
     const [events, setEvents] = useState(mockedEvents);
 
     useEffect ( () => {
@@ -34,7 +37,7 @@ function ManageEvents() {
                             <tr key={index} className="bg-lightblue bg-opacity-50">
                                 <td className="p-5">{event.name}</td>
                                 <td className="lg:flex items-center justify-between">
-                                    <button className='flex my-2 items-center justify-center duration-500 hover:bg-lightblue rounded-md p-3'><div className='w-5 '> <FaEdit /> </div>Edytuj</button>
+                                    <button onClick={() => navigate("/edytuj-wydarzenie")} className='flex my-2 items-center justify-center duration-500 hover:bg-lightblue rounded-md p-3'><div className='w-5 '> <FaEdit /> </div>Edytuj</button>
                                     <button className='flex my-2 items-center justify-center duration-500 hover:bg-lightblue rounded-md p-3'><div className='w-5 '> <MdDelete /> </div>Usuń</button>
                                 </td>
                             </tr>

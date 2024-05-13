@@ -1,9 +1,12 @@
 import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 
 import { IoIosArrowBack } from "react-icons/io";
 import { AiOutlineCheck } from "react-icons/ai";
 
 function EditEvent() {
+    const navigate = useNavigate();
+
     const [name, setName] = useState();
     const [place, setPlace] = useState();
     const [date, setDate] = useState();
@@ -17,8 +20,8 @@ function EditEvent() {
                 <div className="bg-lightblue w-full rounded-t-3xl lg:text-2xl text-l flex justify-between items-center">
                     <span className='p-3'>Edytuj wydarzenie</span>
                     <div className="flex justify-center items-center">
-                        <button className='flex items-center justify-center mx-3 duration-500 bg-blue hover:bg-opacity-50 rounded-md my-2 py-1 px-3'><div className='w-5 '> <AiOutlineCheck /> </div>Zapisz</button>
-                        <button className='flex items-center justify-center mx-3 duration-500 bg-blue hover:bg-opacity-50 rounded-md my-2 py-1 px-3'><div className='w-5 '> <IoIosArrowBack /> </div>Wróć</button>
+                        <button onClick={() => navigate("/zarzadzaj-wydarzeniami")} className='flex items-center justify-center mx-3 duration-500 bg-blue hover:bg-opacity-50 rounded-md my-2 py-1 px-3'><div className='w-5 '> <AiOutlineCheck /> </div>Zapisz</button>
+                        <button onClick={() => navigate("/zarzadzaj-wydarzeniami")} className='flex items-center justify-center mx-3 duration-500 bg-blue hover:bg-opacity-50 rounded-md my-2 py-1 px-3'><div className='w-5 '> <IoIosArrowBack /> </div>Wróć</button>
                     </div>
                 </div>
                 <div className="flex flex-col items-center overflow-y-auto max-h-[85%]">
