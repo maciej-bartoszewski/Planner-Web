@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useNavigate } from "react-router-dom";
 
 import { FaInfo } from "react-icons/fa6";
 import { AiOutlineCheck } from "react-icons/ai";
@@ -13,6 +14,8 @@ const mockedLocals = [
   ];
 
 function Locals() {
+    const navigate = useNavigate();
+
     const [locals, setLocals] = useState(mockedLocals);
 
     useEffect ( () => {
@@ -38,7 +41,7 @@ function Locals() {
                             <tr key={index} className="bg-lightblue bg-opacity-50">
                                 <td className="p-5">{local.name}</td>
                                 <td className="lg:flex items-center justify-between">
-                                    <button className='flex items-center duration-500 hover:bg-lightblue rounded-md my-2 p-3'><div className='w-5 '> <FaInfo /> </div>Informacje</button>
+                                    <button onClick={() => navigate("/punkty-gastronomiczne-info")} className='flex items-center duration-500 hover:bg-lightblue rounded-md my-2 p-3'><div className='w-5 '> <FaInfo /> </div>Informacje</button>
                                     <button className='flex items-center duration-500 hover:bg-lightblue rounded-md my-2 p-3'><div className='w-5 '> <AiOutlineCheck /> </div>Akceptuj</button>
                                     <button className='flex items-center duration-500 hover:bg-lightblue rounded-md my-2 p-3'><div className='w-5 '> <AiOutlineClose /> </div>Odrzuć</button>
                                 </td>

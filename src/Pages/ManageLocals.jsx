@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useNavigate } from "react-router-dom";
 
 import { MdDelete } from "react-icons/md";
 import { FaEdit } from "react-icons/fa";
@@ -10,6 +11,8 @@ const mockedLocals = [
   ];
 
 function ManageLocals() {
+    const navigate = useNavigate();
+
     const [locals, setLocals] = useState(mockedLocals);
 
     useEffect ( () => {
@@ -35,7 +38,7 @@ function ManageLocals() {
                             <tr key={index} className="bg-lightblue bg-opacity-50">
                                 <td className="p-5">{local.name}</td>
                                 <td className="lg:flex items-center justify-between">
-                                    <button className='flex items-center duration-500 hover:bg-lightblue rounded-md my-2 p-3'><div className='w-5 '> <FaEdit /> </div>Edytuj</button>
+                                    <button     onClick={() => navigate("/edytuj-punkt-gastronomiczny")} className='flex items-center duration-500 hover:bg-lightblue rounded-md my-2 p-3'><div className='w-5 '> <FaEdit /> </div>Edytuj</button>
                                     <button className='flex items-center duration-500 hover:bg-lightblue rounded-md my-2 p-3'><div className='w-5 '> <MdDelete /> </div>Usuń</button>
                                 </td>
                             </tr>
