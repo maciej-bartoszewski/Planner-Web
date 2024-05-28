@@ -54,7 +54,7 @@ function App() {
           }
         />
         <Route
-          path="/wydarzenia-info"
+          path="/wydarzenia-info/:eventID"
           element={
             <ProtectedRoute user={user}>
               <EventInfo />
@@ -70,7 +70,7 @@ function App() {
           }
         />
         <Route
-          path="/edytuj-wydarzenie"
+          path="/edytuj-wydarzenie/:eventID"
           element={
             <ProtectedRoute user={user}>
               <EditEvent />
@@ -86,7 +86,7 @@ function App() {
           }
         />
         <Route
-          path="/punkty-gastronomiczne-info"
+          path="/punkty-gastronomiczne-info/:localID"
           element={
             <ProtectedRoute user={user}>
               <LocalInfo />
@@ -102,7 +102,7 @@ function App() {
           }
         />
         <Route
-          path="/edytuj-punkt-gastronomiczny"
+          path="/edytuj-punkt-gastronomiczny/:localID"
           element={
             <ProtectedRoute user={user}>
               <EditLocal />
