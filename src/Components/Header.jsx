@@ -33,42 +33,27 @@ const Header = ({ user }) => {
       {user && (
         <ul className="hidden lg:flex items-center text-md font-bold h-full">
           <li className="hover:bg-lightblue h-full px-3 duration-500 flex items-center justify-center text-center">
-            <Link
-              to="/wydarzenia"
-              className="h-full flex items-center justify-center"
-            >
+            <Link to="/wydarzenia" className="h-full flex items-center justify-center">
               Wydarzenia
             </Link>
           </li>
           <li className="hover:bg-lightblue h-full px-3 duration-500 flex items-center justify-center text-center">
-            <Link
-              to="/zarzadzaj-wydarzeniami"
-              className="h-full flex items-center justify-center"
-            >
+            <Link to="/zarzadzaj-wydarzeniami" className="h-full flex items-center justify-center">
               Zarządzaj wydarzeniami
             </Link>
           </li>
           <li className="hover:bg-lightblue h-full px-3 duration-500 flex items-center justify-center text-center">
-            <Link
-              to="/punkty-gastronomiczne"
-              className="h-full flex items-center justify-center"
-            >
+            <Link to="/punkty-gastronomiczne" className="h-full flex items-center justify-center">
               Punkty gastronimiczne
             </Link>
           </li>
           <li className="hover:bg-lightblue h-full px-3 duration-500 flex items-center justify-center text-center">
-            <Link
-              to="/zarzadzaj-punktami-gastronomicznymi"
-              className="h-full flex items-center justify-center"
-            >
-              Zarządzj punktami gastronomicznymi
+            <Link to="/zarzadzaj-punktami-gastronomicznymi" className="h-full flex items-center justify-center">
+              Zarządzaj punktami gastronomicznymi
             </Link>
           </li>
           <li className="hover:bg-lightblue h-full px-3 duration-500 flex items-center justify-center text-center">
-            <Link
-              to="/zarzadzaj-uzytkownikami"
-              className="h-full flex items-center justify-center"
-            >
+            <Link to="/zarzadzaj-uzytkownikami" className="h-full flex items-center justify-center">
               Zarządzaj użytkownikami
             </Link>
           </li>
@@ -118,17 +103,12 @@ const Header = ({ user }) => {
             <Link to="/punkty-gastronomiczne">Punkty gastronomiczne</Link>
           </li>
           <li className="hover:bg-lightblue px-3 py-4 duration-500 w-full text-center">
-            <Link to="/zarzadzaj-punktami-gastronomicznymi">
-              Zarządzj punktami gastronomicznymi
-            </Link>
+            <Link to="/zarzadzaj-punktami-gastronomicznymi">Zarządzj punktami gastronomicznymi</Link>
           </li>
           <li className="hover:bg-lightblue px-3 py-4 duration-500 w-full text-center">
             <Link to="/zarzadzaj-uzytkownikami">Zarządzaj użytkownikami</Link>
           </li>
-          <li
-            onClick={handleSignOut}
-            className="hover:bg-lightblue px-3 py-4 duration-500 w-full text-center"
-          >
+          <li onClick={handleSignOut} className="hover:bg-lightblue px-3 py-4 duration-500 w-full text-center">
             Wyloguj się
           </li>
         </ul>
