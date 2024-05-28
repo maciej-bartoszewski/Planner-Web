@@ -63,10 +63,12 @@ function EventInfo() {
               </div>
               <div className="flex items-center justify-between lg:w-[40%] md:w-[55%] w-[70%] bg-lightblue bg-opacity-50 my-2 p-3">
                 <span>Link do mapy: </span>
-                <span>{eventData.MapLink} </span>
+                <span>
+                  <a href={eventData.MapLink}> Naciśnij aby sprawdzić </a>
+                </span>
               </div>
               <div className="flex items-center justify-between lg:w-[40%] md:w-[55%] w-[70%] bg-[#FFFFFF] my-2 p-3">
-                <img className="" src={eventData.ImageLink} />
+                <img className="mx-auto" src={eventData.ImageLink} />
               </div>
             </>
           )}
