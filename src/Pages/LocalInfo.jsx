@@ -46,16 +46,18 @@ function LocalInfo() {
           <div className="flex flex-col items-center overflow-y-auto max-h-[85%] lg:text-2xl text-l mt-10">
             <div className="flex items-center justify-between lg:w-[40%] md:w-[55%] w-[70%] bg-lightblue bg-opacity-50 my-2 p-3">
               <span>Nazwa lokalu: </span>
-              <span>{localData.Name}</span>
+              <span className="text-right">{localData.Name}</span>
             </div>
             <div className="flex items-center justify-between lg:w-[40%] md:w-[55%] w-[70%] bg-lightblue bg-opacity-50 my-2 p-3">
               <span>Adres lokalu: </span>
-              <span>{localData.Location}</span>
+              <span className="text-right">{localData.Location}</span>
             </div>
             <div className="flex items-center justify-between lg:w-[40%] md:w-[55%] w-[70%] bg-lightblue bg-opacity-50 my-2 p-3">
               <span>Link do mapy: </span>
-              <span>
-                <a href={localData.MapLink}> Naciśnij aby sprawdzić </a>
+              <span className="text-right">
+                <a href={localData.MapLink} target="_blank">
+                  Naciśnij aby sprawdzić
+                </a>
               </span>
             </div>
             <div className="flex items-center justify-between lg:w-[40%] md:w-[55%] w-[70%] bg-[#FFFFFF] my-2 p-3">
