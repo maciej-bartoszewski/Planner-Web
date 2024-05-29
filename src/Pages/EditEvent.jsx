@@ -170,7 +170,7 @@ function EditEvent() {
       <div className="mt-10 bg-blue w-[95%] h-5/6 rounded-3xl">
         <div className="bg-lightblue w-full rounded-t-3xl lg:text-2xl text-l flex justify-between items-center">
           <span className="p-3">Edytuj wydarzenie</span>
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center flex-col sm:flex-row">
             <button
               onClick={handleSave}
               className="flex items-center justify-center mx-3 duration-500 bg-blue hover:bg-opacity-50 rounded-md my-2 py-1 px-3"
@@ -242,8 +242,11 @@ function EditEvent() {
               className="px-3 py-1 w-full rounded-xl text-xl bg-blue border-white border-4 hover:border-lightblue duration-500"
             ></input>
           </div>
+          <div className="w-1/2 md:w-1/3 bg-[#FFFFFF] my-3">
+            <img className="mx-auto my-auto py-3 w-[50%]" src={picture} alt="zdjecie lokalu"></img>
+          </div>
           <div className="md:w-1/3">
-            <p className="pt-5 font-semibold">Link do mapy</p>
+            <p className="font-semibold">Link do mapy</p>
             <input
               type="text"
               value={location}
