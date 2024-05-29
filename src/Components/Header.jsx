@@ -31,7 +31,7 @@ const Header = ({ user }) => {
     <div className="absolute top-0 left-0 w-full bg-blue h-16 flex items-center justify-between px-3 z-10">
       <img src={logo} className="h-full" />
       {user && (
-        <ul className="hidden lg:flex items-center text-md font-bold h-full">
+        <ul className="hidden lg:flex items-center text-md font-bold h-full gap-8">
           <li className="hover:bg-lightblue h-full px-3 duration-500 flex items-center justify-center text-center">
             <Link to="/wydarzenia" className="h-full flex items-center justify-center">
               Wydarzenia
@@ -44,12 +44,12 @@ const Header = ({ user }) => {
           </li>
           <li className="hover:bg-lightblue h-full px-3 duration-500 flex items-center justify-center text-center">
             <Link to="/punkty-gastronomiczne" className="h-full flex items-center justify-center">
-              Punkty gastronimiczne
+              Lokale
             </Link>
           </li>
           <li className="hover:bg-lightblue h-full px-3 duration-500 flex items-center justify-center text-center">
             <Link to="/zarzadzaj-punktami-gastronomicznymi" className="h-full flex items-center justify-center">
-              Zarządzaj punktami gastronomicznymi
+              Zarządzaj lokalami
             </Link>
           </li>
           <li className="hover:bg-lightblue h-full px-3 duration-500 flex items-center justify-center text-center">
@@ -94,19 +94,29 @@ const Header = ({ user }) => {
             )}
           </div>
           <li className="hover:bg-lightblue px-3 py-4 duration-500 w-full text-center">
-            <Link to="/wydarzenia">Wydarzenia</Link>
+            <Link to="/wydarzenia" onClick={handleNav}>
+              Wydarzenia
+            </Link>
           </li>
           <li className="hover:bg-lightblue px-3 py-4 duration-500 w-full text-center">
-            <Link to="/zarzadzaj-wydarzeniami">Zarządzaj wydarzeniami</Link>
+            <Link to="/zarzadzaj-wydarzeniami" onClick={handleNav}>
+              Zarządzaj wydarzeniami
+            </Link>
           </li>
           <li className="hover:bg-lightblue px-3 py-4 duration-500 w-full text-center">
-            <Link to="/punkty-gastronomiczne">Punkty gastronomiczne</Link>
+            <Link to="/punkty-gastronomiczne" onClick={handleNav}>
+              Punkty gastronomiczne
+            </Link>
           </li>
           <li className="hover:bg-lightblue px-3 py-4 duration-500 w-full text-center">
-            <Link to="/zarzadzaj-punktami-gastronomicznymi">Zarządzj punktami gastronomicznymi</Link>
+            <Link to="/zarzadzaj-punktami-gastronomicznymi" onClick={handleNav}>
+              Zarządzj punktami gastronomicznymi
+            </Link>
           </li>
           <li className="hover:bg-lightblue px-3 py-4 duration-500 w-full text-center">
-            <Link to="/zarzadzaj-uzytkownikami">Zarządzaj użytkownikami</Link>
+            <Link to="/zarzadzaj-uzytkownikami" onClick={handleNav}>
+              Zarządzaj użytkownikami
+            </Link>
           </li>
           <li onClick={handleSignOut} className="hover:bg-lightblue px-3 py-4 duration-500 w-full text-center">
             Wyloguj się
