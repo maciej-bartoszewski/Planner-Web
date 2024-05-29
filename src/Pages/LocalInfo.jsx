@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import { getFirestore, doc, getDoc } from "firebase/firestore";
-import { db } from "../firebase";
 
 function LocalInfo() {
   const { localID } = useParams();
@@ -56,7 +55,7 @@ function LocalInfo() {
             <div className="flex items-center justify-between lg:w-[40%] md:w-[55%] w-[70%] bg-lightblue bg-opacity-50 my-2 p-3">
               <span>Link do mapy: </span>
               <span>
-                <a href={eventData.MapLink}> Naciśnij aby sprawdzić </a>
+                <a href={localData.MapLink}> Naciśnij aby sprawdzić </a>
               </span>
             </div>
             <div className="flex items-center justify-between lg:w-[40%] md:w-[55%] w-[70%] bg-[#FFFFFF] my-2 p-3">
