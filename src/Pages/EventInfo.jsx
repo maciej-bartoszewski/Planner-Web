@@ -47,24 +47,26 @@ function EventInfo() {
             <>
               <div className="flex items-center justify-between lg:w-[40%] md:w-[55%] w-[70%] bg-lightblue bg-opacity-50 my-2 p-3">
                 <span>Nazwa wydarzenia: </span>
-                <span>{eventData.Name} </span>
+                <span className="text-right">{eventData.Name} </span>
               </div>
               <div className="flex items-center justify-between lg:w-[40%] md:w-[55%] w-[70%] bg-lightblue bg-opacity-50 my-2 p-3">
                 <span>Miejsce wydarzenia: </span>
-                <span>{eventData.Location} </span>
+                <span className="text-right">{eventData.Location} </span>
               </div>
               <div className="flex items-center justify-between lg:w-[40%] md:w-[55%] w-[70%] bg-lightblue bg-opacity-50 my-2 p-3">
                 <span>Data wydarzenia: </span>
-                <span>{eventData.Date} </span>
+                <span className="text-right">{eventData.Date} </span>
               </div>
               <div className="flex items-center justify-between lg:w-[40%] md:w-[55%] w-[70%] bg-lightblue bg-opacity-50 my-2 p-3">
                 <span>Opis: </span>
-                <span className="w-[80%] text-right">{eventData.Description} </span>
+                <span className="w-[80%] text-justify">{eventData.Description} </span>
               </div>
               <div className="flex items-center justify-between lg:w-[40%] md:w-[55%] w-[70%] bg-lightblue bg-opacity-50 my-2 p-3">
                 <span>Link do mapy: </span>
-                <span>
-                  <a href={eventData.MapLink}> Naciśnij aby sprawdzić </a>
+                <span className="text-right">
+                  <a href={eventData.MapLink} target="_blank">
+                    Naciśnij aby sprawdzić
+                  </a>
                 </span>
               </div>
               <div className="flex items-center justify-between lg:w-[40%] md:w-[55%] w-[70%] bg-[#FFFFFF] my-2 p-3">
