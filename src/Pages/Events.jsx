@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
-import { FaInfo } from "react-icons/fa";
+import { FaInfo } from "react-icons/fa6";
 import { AiOutlineCheck } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
 
@@ -80,7 +80,7 @@ function Events() {
         <div className="bg-lightblue w-full rounded-t-3xl p-3 lg:text-2xl text-l">
           Nowe zgłoszenia dotyczące wydarzeń
         </div>
-        <div className="overflow-y-auto lg:max-h-[90%] max-h-[85%]">
+        <div className="overflow-y-auto lg:max-h-[87%] max-h-[85%]">
           <table className="w-full mt-2 lg:text-xl text-md border-separate border-spacing-y-1">
             <thead className="bg-lightblue text-left">
               <tr>
@@ -97,7 +97,7 @@ function Events() {
                       onClick={() => navigate(`/wydarzenia-info/${event.id}`)}
                       className="flex items-center duration-500 hover:bg-lightblue rounded-md my-2 p-3"
                     >
-                      <div className="w-5">
+                      <div className="w-5 mb-1 mx-1">
                         <FaInfo />
                       </div>
                       Informacje
@@ -106,7 +106,7 @@ function Events() {
                       onClick={() => acceptEvent(event.id)}
                       className="flex items-center duration-500 hover:bg-lightblue rounded-md my-2 p-3"
                     >
-                      <div className="w-5">
+                      <div className="w-5 mx-1">
                         <AiOutlineCheck />
                       </div>
                       Akceptuj
@@ -115,7 +115,7 @@ function Events() {
                       onClick={() => rejectEvent(event.id)}
                       className="flex items-center duration-500 hover:bg-lightblue rounded-md my-2 p-3"
                     >
-                      <div className="w-5">
+                      <div className="w-5 mx-1">
                         <AiOutlineClose />
                       </div>
                       Odrzuć

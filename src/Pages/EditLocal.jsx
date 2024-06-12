@@ -152,7 +152,7 @@ function EditLocal() {
               onClick={handleSave}
               className="flex items-center justify-center mx-3 duration-500 bg-blue hover:bg-opacity-50 rounded-md my-2 py-1 px-3"
             >
-              <div className="w-5">
+              <div className="w-5 mr-2">
                 {" "}
                 <AiOutlineCheck />{" "}
               </div>
@@ -162,7 +162,7 @@ function EditLocal() {
               onClick={handleBack}
               className="flex items-center justify-center mx-3 duration-500 bg-blue hover:bg-opacity-50 rounded-md my-2 py-1 px-3"
             >
-              <div className="w-5">
+              <div className="w-5 mx-1">
                 {" "}
                 <IoIosArrowBack />{" "}
               </div>

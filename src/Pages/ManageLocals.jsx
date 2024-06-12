@@ -64,7 +64,7 @@ function ManageLocals() {
         <div className="bg-lightblue w-full rounded-t-3xl p-3 lg:text-2xl text-l">
           Zarządzaj punktami gastronomicznymi
         </div>
-        <div className="overflow-y-auto lg:max-h-[90%] max-h-[85%]">
+        <div className="overflow-y-auto lg:max-h-[87%] max-h-[85%]">
           <table className="w-full mt-2 lg:text-xl text-md border-separate border-spacing-y-1">
             <thead className="bg-lightblue text-left">
               <tr>
@@ -81,7 +81,7 @@ function ManageLocals() {
                       onClick={() => navigate(`/edytuj-punkt-gastronomiczny/${local.id}`)}
                       className="flex items-center duration-500 hover:bg-lightblue rounded-md my-2 p-3"
                     >
-                      <div className="w-5 ">
+                      <div className="w-5 mx-1">
                         {" "}
                         <FaEdit />{" "}
                       </div>
@@ -91,7 +91,7 @@ function ManageLocals() {
                       onClick={() => deleteLocal(local.id)}
                       className="flex items-center duration-500 hover:bg-lightblue rounded-md my-2 p-3"
                     >
-                      <div className="w-5 ">
+                      <div className="w-5 mx-1">
                         {" "}
                         <MdDelete />{" "}
                       </div>
