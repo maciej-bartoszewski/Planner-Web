@@ -80,7 +80,7 @@ function Locals() {
         <div className="bg-lightblue w-full rounded-t-3xl p-3 lg:text-2xl text-l">
           Nowe zgłoszenia dotyczące punktów gastronomicznych
         </div>
-        <div className="overflow-y-auto lg:max-h-[90%] max-h-[85%]">
+        <div className="overflow-y-auto lg:max-h-[87%] max-h-[85%]">
           <table className="w-full mt-2 lg:text-xl text-md border-separate border-spacing-y-1">
             <thead className="bg-lightblue text-left">
               <tr>
@@ -97,7 +97,7 @@ function Locals() {
                       onClick={() => navigate(`/punkty-gastronomiczne-info/${local.id}`)}
                       className="flex items-center duration-500 hover:bg-lightblue rounded-md my-2 p-3"
                     >
-                      <div className="w-5">
+                      <div className="w-5 mb-1 mx-1">
                         <FaInfo />
                       </div>
                       Informacje
@@ -106,7 +106,7 @@ function Locals() {
                       onClick={() => acceptLocal(local.id)}
                       className="flex items-center duration-500 hover:bg-lightblue rounded-md my-2 p-3"
                     >
-                      <div className="w-5">
+                      <div className="w-5 mx-1">
                         <AiOutlineCheck />
                       </div>
                       Akceptuj
@@ -115,7 +115,7 @@ function Locals() {
                       onClick={() => rejectLocal(local.id)}
                       className="flex items-center duration-500 hover:bg-lightblue rounded-md my-2 p-3"
                     >
-                      <div className="w-5">
+                      <div className="w-5 mx-1">
                         <AiOutlineClose />
                       </div>
                       Odrzuć
