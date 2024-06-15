@@ -226,7 +226,7 @@ function EditEvent() {
           <div className="md:w-1/3">
             <p className="pt-5 font-semibold">Opis wydarzenia</p>
             <textarea
-              rows={4}
+              rows={8}
               cols={40}
               value={description}
               onChange={(e) => setDescription(e.target.value)}

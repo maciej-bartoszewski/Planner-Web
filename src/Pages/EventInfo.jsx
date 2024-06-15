@@ -59,7 +59,7 @@ function EventInfo() {
               </div>
               <div className="flex items-center justify-between lg:w-[40%] md:w-[55%] w-[70%] bg-lightblue bg-opacity-50 my-2 p-3">
                 <span>Opis: </span>
-                <span className="w-[80%] text-justify">{eventData.Description} </span>
+                <span className="w-[80%] text-right">{eventData.Description} </span>
               </div>
               <div className="flex items-center justify-between lg:w-[40%] md:w-[55%] w-[70%] bg-lightblue bg-opacity-50 my-2 p-3">
                 <span>Link do mapy: </span>
